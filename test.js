@@ -1,4 +1,4 @@
-console.log('Xin chao ban');
+console.log('Hello');
 var myOb = {
     myName: 'tuan',
     age: 20,

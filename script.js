@@ -451,7 +451,7 @@
 // console.log(result); // Expected: "Honda - Mazda - Mercedes"
 
 // 3. Pop: xóa phần tử cuối của mảng
-        // và trả về mảng mới khi gọi mảng đó và k có phần tử đã xóa
+// và trả về mảng mới khi gọi mảng đó và k có phần tử đã xóa
 // console.log(languages.pop())
 // console.log(languages)
 
@@ -473,7 +473,7 @@
 // console.log(languages)
 
 // 7. Splice: xóa đi số phần tử bắt đầu từ 
-            // Vừa xóa vừa chèn
+// Vừa xóa vừa chèn
 // languages.splice(1, 2) // xóa
 // console.log(languages)
 // languages.splice(1, 0, 'Java') // chèn
@@ -496,7 +496,7 @@
 
 // Viết hàm tại đây
 // function getLastElement(animal) {
-    // return animal.slice().pop();
+// return animal.slice().pop();
 // }
 
 // Ví dụ sử dụng
@@ -540,9 +540,9 @@
 //     this.name = name
 //     this.leg = leg
 //     this.speed = speed
-    // this.getName = function() {
-    //     return `${this.name} ${this.leg}`
-    // }
+// this.getName = function() {
+//     return `${this.name} ${this.leg}`
+// }
 // }
 // var parrot = new Animal('vet', '2 chan', 'Nam My')
 // var rot = new Animal('vet', '2 chan 8 ngon', 'Nam My')
@@ -608,7 +608,7 @@
 // console.log(Math.abs(-8)); // Giá trị tuyệt đối
 // console.log(Math.ceil(21.0000001)); // Làm tròn trên
 // console.log(Math.floor(4.99999999)); // Làm tròn dưới
- 
+
 // console.log(Math.random()); // Returns a pseudorandom number between 0 and 1.
 // console.log(Math.floor(Math.random() * 10)); // Trả về ngẫu nhiên trong đoạn [0 - 9]
 
@@ -849,7 +849,7 @@ VÒNG LẶP - LOOP
 //     'Ha Noi'
 // ]
 // for (var key of myArray) {
-    // console.log(key);
+// console.log(key);
 // }
 
 // var myObject = {
@@ -863,8 +863,8 @@ VÒNG LẶP - LOOP
 // }
 // console.log(Object.keys(myObject));
 // for (var key of Object.keys(myObject)) {
-    // console.log(key);
-    // console.log(myObject[key]);
+// console.log(key);
+// console.log(myObject[key]);
 // }
 
 // 101. Vòng lặp while
@@ -965,7 +965,7 @@ VÒNG LẶP - LOOP
 //     }
 // }
 // => Vòng for cha khi chạy lần đầu rồi tiếp theo đến vòng for con
-    // for con sẽ chạy hết rồi đến for cha
+// for con sẽ chạy hết rồi đến for cha
 
 // var array = [
 //     [[1, 2, 3], [4, 5, 6]],
@@ -1037,7 +1037,7 @@ VÒNG LẶP - LOOP
 //     return number;
 // }
 // console.log(giaithua(3));
-        
+
 // Cách đệ quy
 // function giaiThua(x) {
 //     if (x > 0) {
@@ -1053,3 +1053,141 @@ VÒNG LẶP - LOOP
 
 
 // NGÀY 08/08/2022
+// 107
+// var courses = [
+//     {
+//         id: 1,
+//         name: "JavaScript",
+//         coin: 0
+//     },
+//     {
+//         id: 2,
+//         name: "HTML CSS",
+//         coin: 10 
+//     },
+//     {
+//         id: 3,
+//         name: "PHP",
+//         coin: 0 
+//     },
+//     {
+//         id: 4,
+//         name: "ReactJS",
+//         coin: 400 
+//     },
+
+//     {
+//         id: 5,
+//         name: "PHP",
+//         coin: 0 
+//     }
+// ]
+
+// courses.forEach(function(course, index) {
+//     console.log(index, course);
+// })
+
+// var isFree = courses.every(function(course, index) {
+//     console.log(index);
+//     return course.coin === 0;
+// })
+// console.log(isFree);
+
+// var isFree = courses.some(function(course) {
+//     return course.coin === 0;
+// })
+// console.log(isFree);
+
+// var course = courses.find(function(course, index) {
+//     return course.name === 'PHP';
+// })
+// console.log(course);
+
+// var course = courses.filter(function(course, index) {
+//     return course.name === 'PHP';
+// })
+// console.log(course);
+
+// const sports = [
+//     {
+//         name: 'Bóng rổ',
+//         like: 6
+//     },
+//     {
+//         name: 'Bơi lội',
+//         like: 5
+//     },
+//     {
+//         name: 'Bóng đá',
+//         like: 10
+//     },
+// ]
+// console.log(sports);
+// var getMostFavoriteSport = a => a.filter(b => b.like > 5)
+// var getMostFavoriteSport = arr => arr.filter(fav => fav.like > 5)
+// var ss = sports.filter(function(c9) {
+//     return c9.like > 5
+// })
+// Kỳ vọng
+// console.log(ss);
+// console.log(getMostFavoriteSport(sports)) 
+// Output: [{ name: 'Bóng rổ, like: 6 }, { name: 'Bóng đá, like: 10 }]
+
+
+// NGÀY 08/08/2022
+// 109
+// const map = {};
+// insert key-value-pair
+// map['key1'] = 'value1';
+// map['key2'] = 'value2';
+// map['key3'] = 'value3';
+// check if map contians key
+// if (map['key1']) {
+// console.log('Map contains key1');
+// }
+// get value with specific key
+// console.log(map['key1']);
+
+
+var courses = [
+    {
+        id: 1,
+        name: "JavaScript",
+        coin: 0
+    },
+    {
+        id: 2,
+        name: "HTML CSS",
+        coin: 10
+    },
+    {
+        id: 3,
+        name: "PHP",
+        coin: 0
+    },
+    {
+        id: 4,
+        name: "ReactJS",
+        coin: 400
+    },
+
+    {
+        id: 5,
+        name: "PHP",
+        coin: 0
+    }
+]
+
+function courseHandler(course) {
+    console.log(course);
+}
+
+var newCourse = courses.map(courseHandler)
+
+const kvArray = [
+    { key: 1, value: 10 },
+    { key: 2, value: 20 },
+    { key: 3, value: 30 },
+];
+const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
+console.log(reformattedArray); // [{ 1: 10 }, { 2: 20 }, { 3: 30 }]
