@@ -1148,46 +1148,387 @@ VÒNG LẶP - LOOP
 // get value with specific key
 // console.log(map['key1']);
 
+// var courses = [
+//     {
+//         id: 1,
+//         name: "JavaScript",
+//         coin: 0
+//     },
+//     {
+//         id: 2,
+//         name: "HTML CSS",
+//         coin: 10
+//     },
+//     {
+//         id: 3,
+//         name: "PHP",
+//         coin: 0
+//     },
+//     {
+//         id: 4,
+//         name: "ReactJS",
+//         coin: 400
+//     },
 
-var courses = [
-    {
-        id: 1,
-        name: "JavaScript",
-        coin: 0
-    },
-    {
-        id: 2,
-        name: "HTML CSS",
-        coin: 10
-    },
-    {
-        id: 3,
-        name: "PHP",
-        coin: 0
-    },
-    {
-        id: 4,
-        name: "ReactJS",
-        coin: 400
-    },
+//     {
+//         id: 5,
+//         name: "PHP",
+//         coin: 0
+//     }
+// ]
 
-    {
-        id: 5,
-        name: "PHP",
-        coin: 0
-    }
-]
+// function courseHandler(course) {
+//     return {
+//         id: course.id,
+//         name: `Khóa học: ${course.name}`,
+//         coin: course.coin,
+//         coinText: `Giá: ${course.coin}`
+//     }
+// }
+// var newCourse = courses.map(courseHandler)
+// console.log(newCourse);
 
-function courseHandler(course) {
-    console.log(course);
+// const kvArray = [
+//     { key: 1, value: 10 },
+//     { key: 2, value: 20 },
+//     { key: 3, value: 30 },
+// ];
+// const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
+// console.log(reformattedArray); // [{ 1: 10 }, { 2: 20 }, { 3: 30 }]
+
+
+// NGÀY 12 Nov
+// var courses = [
+//     {
+//         id: 1,
+//         name: "JavaScript",
+//         coin: 0
+//     },
+//     {
+//         id: 2,
+//         name: "HTML CSS",
+//         coin: 10
+//     },
+//     {
+//         id: 3,
+//         name: "PHP",
+//         coin: 0
+//     },
+//     {
+//         id: 4,
+//         name: "ReactJS",
+//         coin: 400
+//     },
+//     {
+//         id: 5,
+//         name: "PHP",
+//         coin: 0
+//     }
+// ]
+
+// var totalCoin = 0;
+// for (var course of courses) {
+//     totalCoin += course.coin;
+// }
+// console.log(totalCoin); // Tính tổng coin các khóa học
+
+
+// var sports = [
+//     {
+//         name: 'Bơi lội',
+//         gold: 11
+//     },
+//     {
+//         name: 'Boxing',
+//         gold: 3
+//     },
+//     {
+//         name: 'Đạp xe',
+//         gold: 4
+//     },
+//     {
+//         name: 'Đấu kiếm',
+//         gold: 5
+//     },
+// ]
+
+// var totalGold = sports.reduce(function(a, b) {
+//     return a + b.gold;
+// })
+// console.log(totalGold);
+
+//C1
+// function getTotalGold(items)
+// {
+//     return items.reduce(function(save,now){
+//         return save + now.gold
+//     },0)
+// };
+//C2
+// var getTotalGold = function(list) {
+//     var golds = list.reduce(function(save, now){
+//         return save + now.gold;
+//     } , 0)
+//     return golds
+// }
+// Expected results:
+// console.log(getTotalGold(sports)) // Output: 23
+
+// var tongs = function(numberList) {
+//     let sum = 0;
+//     for (const number of numberList) {
+//         const newSum = sum + number;
+//         sum = newSum
+//     }
+//     return sum;
+// }
+// console.log(tongs([1, 3]));
+
+// var sums = (list) => {
+//     return list.reduce((sum, num) => sum + num, 0)
+// }
+// console.log(sums([1, 2, 3]));
+
+// const findTheLongestWord = (wordList) => {
+//     if (!Array.isArray(wordList) || wordList.length === 0) return 'Vui long coi lai mang';
+//     return wordList.reduce((tuDau, tuHienTai) => {
+//         return tuDau.length > tuHienTai.length
+//             ? tuDau
+//             : tuHienTai
+//     }, wordList[0])
+// }
+// const mang = ['thanh tuan', 'font']
+// console.log(findTheLongestWord([]));
+
+
+// Ngày 13 Nov
+// 112  
+// var number = [200, 179, 200, 299, 0]
+// var numberList = number.reduce(function(a, b) {
+//     return a + b;
+// }, 2);
+// console.log(numberList);
+
+// Flat - "Làm phẳng" mảng từ Depth array - "Mảng Sâu"
+// var depthArray = [1, 2, [3, 4], 5, 6, [7, 8], 9, 0];
+// var flatArray = depthArray.reduce(function(flatOutput, depthItem) {
+//     return flatOutput.concat(depthItem);
+// }, [])
+// console.log(flatArray);
+
+// Lấy ra các khóa học đưa vào 1 mảng mới
+// var topics = [
+//     {
+//         topic: 'frontend',
+//         course: [
+//             {
+//                 id: 1,
+//                 title: 'HTML, CSS',
+//             },
+//             {
+//                 id: 2,
+//                 title: 'Javascript',
+//             }
+//         ]
+//     },
+//     {
+//         topic: 'backend',
+//         course: [
+//             {
+//                 id: 1,
+//                 title: 'PHP',
+//             },
+//             {
+//                 id: 2,
+//                 title: 'MySqli',
+//             }
+//         ]
+//     }
+// ]
+
+// var newCourse = topics.reduce(function(course, topic) {
+//     return course.concat(topic.course)
+// }, []);
+// console.log(newCourse);
+
+// var htmls = newCourse.map(function(course) {
+//     return `
+//         <div>
+//             <h2>${course.title}</h2>
+//             <p>ID: ${course.id}</p>
+//         </div>
+//     `
+// })
+// console.log(htmls.join(''));
+
+// var watchList = [
+//     {
+//         "Title": "Inception",
+//         "Year": "2010",
+//         "Rated": "PG-13",
+//         "Released": "16 Jul 2010",
+//         "Runtime": "148 min",
+//         "Genre": "Action, Adventure, Crime",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Christopher Nolan",
+//         "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+//         "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+//         "Language": "English, Japanese, French",
+//         "Country": "USA, UK",
+//         "imdbRating": "8.8",
+//         "imdbVotes": "1,446,708",
+//         "imdbID": "tt1375666",
+//         "Type": "movie",
+//     },
+//     {
+//         "Title": "Interstellar",
+//         "Year": "2014",
+//         "Rated": "PG-13",
+//         "Released": "07 Nov 2014",
+//         "Runtime": "169 min",
+//         "Genre": "Adventure, Drama, Sci-Fi",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Jonathan Nolan, Christopher Nolan",
+//         "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+//         "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+//         "Language": "English",
+//         "Country": "USA, UK",
+//         "imdbRating": "8.6",
+//         "imdbVotes": "910,366",
+//         "imdbID": "tt0816692",
+//         "Type": "movie",
+//     },
+//     {
+//         "Title": "The Dark Knight",
+//         "Year": "2008",
+//         "Rated": "PG-13",
+//         "Released": "18 Jul 2008",
+//         "Runtime": "152 min",
+//         "Genre": "Action, Adventure, Crime",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+//         "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+//         "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+//         "Language": "English, Mandarin",
+//         "Country": "USA, UK",
+//         "imdbRating": "9.0",
+//         "imdbVotes": "1,652,832",
+//         "imdbID": "tt0468569",
+//         "Type": "movie",
+//     },
+//     {
+//         "Title": "Batman Begins",
+//         "Year": "2005",
+//         "Rated": "PG-13",
+//         "Released": "15 Jun 2005",
+//         "Runtime": "140 min",
+//         "Genre": "Action, Adventure",
+//         "Director": "Christopher Nolan",
+//         "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+//         "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+//         "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+//         "Language": "English, Urdu, Mandarin",
+//         "Country": "USA, UK",
+//         "imdbRating": "8.3",
+//         "imdbVotes": "972,584",
+//         "imdbID": "tt0372784",
+//         "Type": "movie",
+//     },
+//     {
+//         "Title": "Avatar",
+//         "Year": "2009",
+//         "Rated": "PG-13",
+//         "Released": "18 Dec 2009",
+//         "Runtime": "162 min",
+//         "Genre": "Action, Adventure, Fantasy",
+//         "Director": "James Cameron",
+//         "Writer": "James Cameron",
+//         "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+//         "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+//         "Language": "English, Spanish",
+//         "Country": "USA, UK",
+//         "imdbRating": "7.9",
+//         "imdbVotes": "876,575",
+//         "imdbID": "tt0499549",
+//         "Type": "movie",
+//     }
+// ];
+// function calculateRating(watchList) {
+//     var fimChristopher = watchList.filter(function(nameFim){
+//         return nameFim.Director === 'Christopher Nolan';
+//     })
+
+//     return fimChristopher.reduce(function(a, b) {
+//         return a + parseFloat(b.imdbRating)
+//     }, 0) / fimChristopher.length;
+// }
+// console.log(calculateRating(watchList));
+
+// var ofChristopher = watchList.filter(function(Christopher) {
+//     return Christopher.Writer == 'Christopher Nolan';
+// })
+// console.log(ofChristopher);
+// function calculateRating(watchList){
+//     var chirstopherList = watchList.filter(function(movie){
+//         return movie.Director === "Christopher Nolan";
+//     });
+//     return chirstopherList.reduce(function(totalRating, movie){
+//         return totalRating + parseFloat(movie.imdbRating);
+//     },0) * (1 / chirstopherList.length);
+// }
+// Expected results
+// console.log(calculateRating(watchList)); // Output: 8.675
+
+
+// Ngày 14 Nov
+// 114
+
+// var arr = [
+//     ['name', 'Sơn Đặng'],
+//     ['age', 18],
+//     ['ag', 1],
+// ];
+
+// function arrToObj(arr) {
+//     var a = {};
+//     var check = arr.reduce(function (total, value) {
+//         return total.concat(value);
+//     }, [])
+//     console.log(check)
+//     for (var i = 0; i < check.length; i++) {
+//         if (i % 2 == 1) continue;
+//         var b = i + 1;
+//         a[check[i]] = check[b];
+//     }
+//     return a;
+// }
+
+// console.log({tuan: 'Pham', tuan: 'Pham', age: 20}.age);
+
+// function arrToObj(arr) {
+//     return arr.reduce((obj, curr) => {
+//         // console.log(obj);
+//         // console.log(obj);
+//         obj[curr[0]] = curr[1]
+//         // console.log(obj[curr[0]]);
+//         // console.log(curr[1]);
+//         return obj
+//     }, {})
+// }
+
+// function arrToObj(_arrays){
+//     var _obj = new Object();
+//     for(let i = 0; i < _arrays.length; i++){
+//         var currentIndex = _arrays[i][0]
+//         _obj[currentIndex] = _arrays[i][1]
+//     }
+//     return _obj;
+// }
+// console.log(arrToObj(arr));
+
+// 117
+var cars = ['Rolls-Royce', 'Mercedes', 'Lexus', 'BMW', 'Audi'];
+function checkCar(cars) {
+   return cars.includes('Mercedes', 2);
 }
-
-var newCourse = courses.map(courseHandler)
-
-const kvArray = [
-    { key: 1, value: 10 },
-    { key: 2, value: 20 },
-    { key: 3, value: 30 },
-];
-const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
-console.log(reformattedArray); // [{ 1: 10 }, { 2: 20 }, { 3: 30 }]
+console.log(checkCar(cars)); // Output: ?
