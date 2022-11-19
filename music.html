@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>music</title>
 </head>
+
 <body>
-    
+
     <div style="margin: auto; width: 600px">
-    <h1 id="demo">
-        MUỘN RỒI MÀ SAO CÒN
-    </h1>
-    <button onclick="document.getElementById('demo').innerText = ''">Click me!</button>
-    <!-- <p style="color: rgb(128, 7, 7)">
-        Những ngôi sao trên cao <br/>
-        Là người bạn tâm giao <br/>
-        Lắng nghe anh luyên thuyên <br/>
-        Về một tình đầu đẹp tựa chiêm bao <br/>
-        Có nghe thôi đã thấy ngọt ngào <br/>
-        Đủ biết anh si mê em nhường nào <br/>
-        Ít khi văn thơ anh dạt dào <br/>
-        Bụng đói nhưng vui quên luôn cồn cào <br/> 
-    </p>
-    <em style="color:violet">
-        Nắm đôi tay kiêu sa <br/>
-        Được một lần không ta? (Haizz) <br/>
-        Nghĩ qua thôi <strong style="color: black">con tim</strong> trong anh <br/>
-        Hoá ra yêu đơn phương một người <br/>
-        Hoá ra khi tơ vương một người <br/>
-        Ba giờ đêm vẫn ngồi cười <br/>
-    </em>
-    <p style="color: blue">
-        Cứ ôm anh đi <br/>
-        Ôm anh đi, ôm anh đi, ôm anh đi <br/>
-        Ôm trong cơn mơ <br/>
-        Trong cơn mơ, trong cơn mơ, trong cơn mơ <br/>
-        Có thế cũng khiến anh vui điên lên <br/>
-        Ngỡ như em đang bên <br/>
-        Chấp bút đôi ba câu thơ ngọt ngào, muốn em đặt tên <br/>
-    </p>     
-    <img style="width: 600px;" src="img/Sontung.png" alt="Có thể hình ảnh không tồn tại"/>
-    <div>
-        Tác giả: <em><a href="https://vi.wikipedia.org/wiki/S%C6%A1n_T%C3%B9ng_M-TP">Sơn Tùng M-TP</a></em>
+        <h1 style="border: 1px solid rebeccapurple;
+        border-radius: 12px; box-sizing: border-box; padding: 12px;
+        text-align: center; background-color: #ccc;
+        box-shadow: 0px 5px 12px 2px steelblue;
+        " id="demo">
+            MUỘN RỒI MÀ SAO CÒN
+        </h1>
+        <button 
+        onclick="var x = document.getElementById('demo')
+                x.innerText = 'Ngủ thôi:v'
+                x.style.color = 'red'
+        ">Click me!</button>
+
+
+
+        <!-- <p style="color: rgb(128, 7, 7)">
+            Những ngôi sao trên cao <br />
+            Là người bạn tâm giao <br />
+            Lắng nghe anh luyên thuyên <br />
+            Về một tình đầu đẹp tựa chiêm bao <br />
+            Có nghe thôi đã thấy ngọt ngào <br />
+            Đủ biết anh si mê em nhường nào <br />
+            Ít khi văn thơ anh dạt dào <br />
+            Bụng đói nhưng vui quên luôn cồn cào <br />
+        </p>
+        <em style="color:violet">
+            Nắm đôi tay kiêu sa <br />
+            Được một lần không ta? (Haizz) <br />
+            Nghĩ qua thôi <strong style="color: black">con tim</strong> trong anh <br />
+            Hoá ra yêu đơn phương một người <br />
+            Hoá ra khi tơ vương một người <br />
+            Ba giờ đêm vẫn ngồi cười <br />
+        </em>
+        <p style="color: blue">
+            Cứ ôm anh đi <br />
+            Ôm anh đi, ôm anh đi, ôm anh đi <br />
+            Ôm trong cơn mơ <br />
+            Trong cơn mơ, trong cơn mơ, trong cơn mơ <br />
+            Có thế cũng khiến anh vui điên lên <br />
+            Ngỡ như em đang bên <br />
+            Chấp bút đôi ba câu thơ ngọt ngào, muốn em đặt tên <br />
+        </p>
+        <img style="width: 600px;" src="img/Sontung.png" alt="Có thể hình ảnh không tồn tại" />
+        <div>
+            Tác giả: <em><a href="https://vi.wikipedia.org/wiki/S%C6%A1n_T%C3%B9ng_M-TP">Sơn Tùng M-TP</a></em>
+        </div>
+        <p>
+            nhìn hơi chán nhỉ
+        </p>
+        <table border="4px">
+            <tr style="color: aqua">
+                <th>Công ty</th>
+                <th>Vị trí cần tuyển</th>
+                <th>Lương(USD)</th>
+            </tr>
+            <tr>
+                <td>Vingruop</td>
+                <td>Chủ tịch Vinhome</td>
+                <td>100000</td>
+            </tr>
+            <tr>
+                <td>Viettel</td>
+                <td>Giám đốc quản lý</td>
+                <td>12000</td>
+            </tr>
+            <tr>
+                <td>Hòa Phát</td>
+                <td>Nhân viên</td>
+                <td>10000</td>
+            </tr>
+        </table> <br />
+        <form>
+            <div>
+                <label>Hãy nói gì đi bạn</label>
+                <input type="text" placeholder="nó hiện gì đây" /> <br />
+            </div>
+            <div>
+                <label>Sơn Tùng có đẹp trai không</label>
+                <select>
+                    <option>Nhìn đàn bà</option>
+                    <option>Được okayy</option>
+                    <option>Méo ra gì///</option>
+                </select>
+            </div>
+            <div>
+                <label>Mời bạn hãy chọn</label>
+                <input type="radio" name="adu">hiện tại có vui không<input type="radio" name="adu">hơi buồn
+            </div>
+            <button>
+                Ấn vào là phê
+            </button>
+        </form> -->
+
+
     </div>
-    <p>
-        nhìn hơi chán nhỉ
-    </p>
-    <table border="4px">
-        <tr style="color: aqua">
-            <th>Công ty</th>
-            <th>Vị trí cần tuyển</th>
-            <th>Lương(USD)</th>
-        </tr>
-        <tr>
-            <td>Vingruop</td>
-            <td>Chủ tịch Vinhome</td>
-            <td>100000</td>
-        </tr>
-        <tr>
-            <td>Viettel</td>
-            <td>Giám đốc quản lý</td>
-            <td>12000</td>
-        </tr>
-        <tr>
-            <td>Hòa Phát</td>
-            <td>Nhân viên</td>
-            <td>10000</td>
-        </tr>
-    </table> <br/>
-    <form>
-        <div>
-            <label>Hãy nói gì đi bạn</label>
-            <input type="text" placeholder="nó hiện gì đây"/> <br/>
-        </div>
-        <div>
-            <label>Sơn Tùng có đẹp trai không</label>
-            <select>
-                <option>Nhìn đàn bà</option>
-                <option>Được okayy</option>
-                <option>Méo ra gì///</option>
-            </select>
-        </div>
-        <div>
-            <label>Mời bạn hãy chọn</label>
-            <input type="radio" name="adu">hiện tại có vui không<input type="radio" name="adu">hơi buồn
-        </div>
-        <button>
-            Ấn vào là phê 
-        </button>
-    </form>
-    </div> -->
 
     <script src="script.js"></script>
 </body>
+
 </html>

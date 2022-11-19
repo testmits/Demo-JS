@@ -1481,8 +1481,7 @@ VÒNG LẶP - LOOP
 
 
 // Ngày 14 Nov
-// 114
-
+// 113
 // var arr = [
 //     ['name', 'Sơn Đặng'],
 //     ['age', 18],
@@ -1526,9 +1525,250 @@ VÒNG LẶP - LOOP
 // }
 // console.log(arrToObj(arr));
 
+// 114: Xây dựng hàm reduce2 giống phương thức reduce gốc
+// const numbers = [1, 2, 3, 4, 5]
+// function sum(number) {
+//     return number.reduce((total, number) => {
+//         return total + number
+//     },)
+// }
+// console.log(sum(numbers));
+
+// Array.prototype.reduce2 = function(callback, result) {
+//     let i = 0;
+//     if (arguments.length < 2) {
+//         i = 1;
+//         result = this[0];
+//     }
+//     for (; i < this.length; i++) {
+//         result = callback(result, this[i], i, this) 
+//     }
+//     return result;
+// }
+
+// function sum1(number) {
+//     return number.reduce2((total, number) => {
+//         return total + number
+//     },)
+// }
+// console.log(sum1(numbers));
+
 // 117
-var cars = ['Rolls-Royce', 'Mercedes', 'Lexus', 'BMW', 'Audi'];
-function checkCar(cars) {
-   return cars.includes('Mercedes', 2);
+// var cars = ['Rolls-Royce', 'Mercedes', 'Lexus', 'BMW', 'Audi'];
+// function checkCar(cars) {
+//    return cars.includes('Mercedes', 2);
+// }
+// console.log(checkCar(cars)); // Output: ?
+
+// 118
+// function myFunction(param) {
+//     if (typeof param === 'function') {
+//         param('hoc lap trinh')
+//     } else (console.log('Ban nhap sai roi'))
+// }
+// function myFunction2(value) {
+//     console.log('Value: ', value);
+// }
+// myFunction(12)
+
+// 119
+// function sumCb(a, b) {
+//     return console.log(a + b);
+// }
+// function subCb(a, b) {
+//     return console.log(a - b);
+// }
+// function multiCb(a, b) {
+//     return console.log(a * b);
+// }
+// function divCb(a, b) {
+//     return console.log(a / b);
+// }
+// function caculate(a, b, cb) {
+//     return cb(a, b);
+// }
+// Expected results
+// caculate(1, 2, sumCb) // Output: 3
+// caculate(1, 2, subCb) // Output: -1
+// caculate(1, 2, multiCb) // Output: 2
+// caculate(3, 1, divCb) // Output: 3
+
+
+// 16 Nov
+// 120
+// Array.prototype.map2 = function(callback) {
+//     var araayLength = this.length;
+//     for (let i = 0; i < araayLength; ++i) {
+//         callback(this[i], i)
+//     }
+// }
+// var courses = [
+//     'JavaScript',
+//     'PHP',
+//     'Ruby'
+// ]
+// courses.map2(function(A, b) {
+//     console.log(A, b);
+// })
+// var map = courses.map(function(value) {
+//     return `<h2>${value}</h2>`
+// })
+// console.log(map.join(''));
+
+// BtVd
+// Array.prototype.myMap = function(cb) {
+//     var arrays = []
+//     var araayLength = this.length;
+//     for (let i = 0; i < araayLength; ++i) {
+//         var array = cb(this[i], i)
+//         arrays.push(array)
+//     }
+//     return arrays
+// }
+// // Expected results
+// const numbers = [1, 2, 3];
+// console.log(numbers.myMap(function (number) {
+//     return number * 2;
+// })) // Output: [2, 4, 6]
+// console.log(numbers.myMap(function (number, index) {
+//     return number * index;
+// })) // Output: [0, 2, 6]
+
+
+// 18 Nov
+// 123: myForEach (Xây dựng myForEach hoạt động giống forEach)
+// var courses = ['JavaScript', 'PHP', 'MySql']
+// courses.forEach(function(value, index, array) {
+//     console.log(value, index, array);
+// })
+// Array.prototype.myFunction = function(cb) {
+//     for (var i in this) {
+//         if (this.hasOwnProperty(i)) {
+//             cb(this[i], typeof parseFloat(i), this)
+//         }
+//     }
+// }
+// courses.myFunction(function(course, index, array) {
+//     console.log(course, index, array);
+// })
+// let info = {
+//     myName: 'Tuan',
+//     age: 20,
+//     address: 'Thaibinh'
+// }
+// console.log(info.hasOwnProperty('myName'));
+
+// 125: Tạo myFilter hoạt động giống filter
+// Array.prototype.myfilter = function(cb) {
+//     var output = []
+//     for (var key in this) {
+//         if (this.hasOwnProperty(key)) {
+//             var result = cb(this[key], key, this)
+//             if (result) {
+//                 output.push(this[key])
+//             }
+//         }
+//     }
+//     return output
+// }
+// var courses = [
+//     {
+//         info: 'JavaScript',
+//         coin: 900
+//     },
+//     {
+//         info: 'HTML',
+//         coin: 100
+//     },
+//     {
+//         info: 'PHP',
+//         coin: 1000
+//     }
+// ]
+// console.log(courses.myfilter(function(course, index, array) {
+//     return course.coin > 200
+// }));
+// var coini = courses.filter(function(value) {
+//     return value.coin > 200
+// })
+// console.log(coini);
+
+//vd
+// Array.prototype.myFilter = function(cb) {
+//     var output = []
+//     for (var key in this) {
+//         if (this.hasOwnProperty(key)) {
+//             var results = cb(this[key], key, this)
+//             if (results) {
+//                 output.push(this[key])
+//             }
+//         }
+//     }
+//     return output
+// }
+/**
+Expected results:
+const numbers = [1, 2, 3, 4];
+console.log(numbers.myFilter(function (number) {
+    return number % 2 === 0;
+})); Output: [2, 4]
+console.log(numbers.myFilter(function (number, index) {
+    return index % 2 === 0;
+})); Output: [1, 3]
+console.log(numbers.myFilter(function (number, index, array) {
+    return array.length % 2 === 0;
+})); Output: [1, 2, 3, 4]
+ */
+
+// 128
+Array.prototype.mySome = function(cb) {
+    for (var key in this) {
+        if (this.hasOwnProperty(key)) {
+            if (cb(this[key], key, this)) {
+                return true
+            }
+        }
+    }
+    return false
 }
-console.log(checkCar(cars)); // Output: ?
+/**
+Expected results:
+const numbers = [1, 3, 3, 5];
+console.log(numbers.mySome(function (number) {
+    return number % 2 === 0;
+})); Output: false
+console.log(numbers.mySome(function (number, index) {
+    return index % 2 === 0;
+})); Output: true
+console.log(numbers.mySome(function (number, index, array) {
+    return array.length % 2 === 0;
+})); Output: true
+ */
+
+// 130
+// Array.prototype.myEvery = function(cb) {
+//     var output = true
+//     for (var k in this) {
+//         if (this.hasOwnProperty(k)) {
+//             var results = cb(this[k], k, this)
+//             if (!results) {
+//                 output = false
+//                 break
+//             }
+//         }
+//     }
+//     return output
+// }
+// Expected results
+// const numbers = [1, 3, 3, 5];
+// console.log(numbers.myEvery(function (number) {
+//     return number % 2 !== 0;
+// })); // Output: true
+// console.log(numbers.myEvery(function (number, index) {
+//     return index % 2 === 0;
+// })); // Output: false
+// console.log(numbers.myEvery(function (number, index, array) {
+//     return array.length % 2 === 0;
+// })); // Output: true
+
+
